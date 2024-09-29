@@ -1,0 +1,17 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://picsum.photos/1600/900') no-repeat center center/cover;
+  color: white;
+}
+
+.home-container h1 {
+  font-size: 3em;
+}
+
+.home-container p {
+  font-size: 1.5em;
+}
