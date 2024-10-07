@@ -1,16 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header'; // Import the header component
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Home from './components/Home';
-import './styles/App.css';  
+import './styles/App.css';
 
 function App() {
   return (
     <Router>
+      {/* Include Header for consistent navigation */}
+      <Header />
       <Routes>
-        {/* Redirect to login as default */}
-        <Route path="/" element={<Navigate to="/login" />} />
+        {/* Default route to show only header */}
+        <Route path="/" element={<div></div>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
