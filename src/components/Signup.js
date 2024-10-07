@@ -29,11 +29,10 @@ const Signup = () => {
         createdAt: new Date(),
       });
 
-      // Show success message
-      alert("Account registered successfully!");
+      // Redirect to login page after successful registration
+      alert("Account registered successfully! Redirecting to login page...");
+      navigate('/login'); // This is the key step to ensure redirection happens
 
-      // Redirect to login page after registration
-      navigate('/login');
     } catch (err) {
       setError(`Error: ${err.message}`); // Show error to the user
     }
